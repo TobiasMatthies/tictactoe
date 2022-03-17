@@ -1,0 +1,298 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+    overflow-x: hidden;
+}
+
+.d-none {
+    display: none !important;
+}
+
+#table_container {
+    height: 600px;
+    width: 600px;
+    position: relative;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    width: 600px;
+}
+
+td {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border: 5px solid black;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(213, 220, 252, 0.3);
+}
+
+td img {
+    height: 160px;
+    width: 160px;
+    top: 20px;
+    left: 20px;
+}
+
+#player_container {
+    width: 550px;
+}
+
+.shape {
+    height: 50px;
+    width: 50px;
+}
+
+.player {
+    font-size: 34px;
+}
+
+.line {
+    height: 12.5px;
+    width: 480px;
+    left: 60px;
+}
+
+#h_line1 {
+    top: 92px !important;
+}
+
+#h_line2 {
+    top: 295.5px !important;
+}
+
+#h_line3 {
+    top: 501.25px !important;
+}
+
+.vertical {
+    top: 300px !important;
+}
+
+#v_line1 {
+    left: -166px !important;
+}
+
+#v_line2 {
+    left: 35px !important;
+}
+
+#v_line3 {
+    left: 236px !important;
+}
+
+tr:first-child td {
+    border-top: 0;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+td img {
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    object-fit: contain;
+}
+
+tr td:first-child {
+    border-left: 0;
+}
+
+tr td:last-child {
+    border-right: 0;
+}
+
+#player_container {
+    margin-top: 100px;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.one_player_container {
+    display: flex;
+    align-items: center;
+}
+
+.shape {
+    height: 80px;
+    width: 80px;
+}
+
+.player {
+    margin-left: 20px;
+    font-size: 54px;
+    color: #c0c0c0;
+}
+
+.active_player {
+    color: #b23bdd !important;
+}
+
+.inactive_player {
+    opacity: 0.5;
+}
+
+.line {
+    height: 14px;
+    width: 540px;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    background-color: #272727;
+    border-radius: 8px;
+    opacity: 0.8;
+    z-index: 1;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+}
+
+.vertical {
+    transform: rotate(90deg) scaleX(0.0);
+    top: 426px;
+}
+
+.diagonal {
+    width: 700px;
+    top: 296px;
+    left: -44px;
+}
+
+#game_over {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #b23bdd;
+    background-color: white;
+    z-index: 1;
+}
+
+#game_over button {
+    margin-top: 60px;
+    height: 60px;
+    width: 200px;
+    color: white;
+    font-size: 22px;
+    background-color: #0e60e6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#game_over button:hover {
+    background-color: #1150b4;
+}
+
+@media (max-width: 650px) {
+    #table_container {
+        height: 276px;
+        width: 276px;
+    }
+
+    table {
+        height: 100%;
+        width: 100%;
+    }
+
+    tr {
+        width: 276px;
+    }
+
+    td {
+        height: 92px;
+        width: 92px;
+        border: 3px solid black;
+    }
+
+    td img {
+        height: 66px;
+        width: 66px;
+        top: 13px;
+        left: 13px;
+    }
+
+    #player_container {
+        margin-top: 40px;
+        width: 260px;
+    }
+
+    .shape {
+        height: 26px;
+        width: 26px;
+    }
+
+    .player {
+        font-size: 18px;
+    }
+
+    .line {
+        height: 8px;
+        width: 220px;
+        left: 30px;
+    }
+
+    #h_line1 {
+        top: 42px !important;
+    }
+
+    #h_line2 {
+        top: 140px !important;
+    }
+
+    #h_line3 {
+        top: 236px !important;
+    }
+
+    .vertical {
+        top: 140px !important;
+    }
+
+    #v_line1 {
+        left: -62px !important;
+    }
+
+    #v_line2 {
+        left: 30px !important;
+    }
+
+    #v_line3 {
+        left: 124px !important;
+    }
+
+    .diagonal {
+        width: 300px;
+        top: 140px;
+        left: -10px;
+    }
+}
+
+@media (max-width: 300px) {
+    #game_over {
+        font-size: 40px;
+    }
+}

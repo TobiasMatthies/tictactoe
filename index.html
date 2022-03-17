@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./cross Kopie.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </head>
+
 <body>
-    
+    <div id="table_container">
+        <div class="line" id="h_line1" style="top: 136px"></div>
+        <div class="line" id="h_line2" style="top: 426px"></div>
+        <div class="line" id="h_line3" style="top: 713.5px"></div>
+        <div class="line vertical" id="v_line1" style="left: -200px"></div>
+        <div class="line vertical" id="v_line2"></div>
+        <div class="line vertical" id="v_line3" style="left: 380px"></div>
+        <div class="line diagonal" id="d_line1" style="transform: rotate(45deg) scaleX(0.0)"></div>  
+        <div class="line diagonal" id="d_line2" style="transform: rotate(-45deg) scaleX(0.0)"></div>
+        <table>
+            <tr>
+                <td onclick="fillShape(0)" id="field0">
+                    <img class="d-none" id="cross0" src="./img/cross.png">
+                    <img class="d-none" id="circle0" src="./img/circle.png">
+                </td>
+                <td onclick="fillShape(1)" id="field1">
+                    <img class="d-none" id="cross1" src="./img/cross.png">
+                    <img class="d-none" id="circle1" src="./img/circle.png">
+                </td>
+                <td onclick="fillShape(2)" id="field2">
+                    <img class="d-none" id="cross2" src="./img/cross.png">
+                    <img class="d-none" id="circle2" src="./img/circle.png">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(3)" id="field3">
+                    <img class="d-none" id="cross3" src="./img/cross.png">
+                    <img class="d-none" id="circle3" src="./img/circle.png">
+                </td>
+                <td onclick="fillShape(4)" id="field4">
+                    <img class="d-none" id="cross4" src="./img/cross.png">
+                    <img class="d-none" id="circle4" src="./img/circle.png">
+                </td>
+                <td onclick="fillShape(5)" id="field5">
+                    <img class="d-none" id="cross5" src="./img/cross.png">
+                    <img class="d-none" id="circle5" src="./img/circle.png">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(6)" id="field6">
+                    <img class="d-none" id="cross6" src="./img/cross.png">
+                    <img class="d-none" id="circle6" src="./img/circle.png">
+                </td>
+                <td onclick="fillShape(7)" id="field7">
+                    <img class="d-none" id="cross7" src="./img/cross.png">
+                    <img class="d-none" id="circle7" src="./img/circle.png">
+                </td>
+                <td onclick="fillShape(8)" id="field8">
+                    <img class="d-none" id="cross8" src="./img/cross.png">
+                    <img class="d-none" id="circle8" src="./img/circle.png">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="player_container">
+        <div class="one_player_container" id="player_container1">
+            <img class="shape" src="./img/cross.png" alt="cross"> <span class="player active_player" id="player1">Player
+                1</span>
+        </div>
+        <div class="one_player_container inactive_player" id="player_container2">
+            <img class="shape" src="./img/circle.png" alt="circle"> <span class="player" id="player2">Player 2</span>
+        </div>
+    </div>
+
+    <div class="d-none" id="game_over">
+       <span><b id="winning_player"></b> wins!</span>
+       <button onclick="restartGame()" id="restart_button">Restart</button>
+    </div>
 </body>
+
 </html>
